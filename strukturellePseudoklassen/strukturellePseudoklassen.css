@@ -1,0 +1,130 @@
+/*
+  - spricht das Wurzelelement des Dokuments an (immer HTML-Element)
+  - ist deshalb das gleich wie html { font-size: 20px }
+  - :root ist spezifischer!
+*/
+:root {
+  font-size: 20px;
+}
+
+/*
+  - spricht leere Elemente an
+*/
+
+p:empty {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+/*
+  - wählt das erste Kindelement aus
+  - auch zeigen: .container p:first-child
+*/
+
+.container :first-child {
+  font-weight: bold;
+}
+
+/*
+  - wählt das letzte Kindelement aus
+*/
+
+.container :last-child {
+  text-decoration: underline;
+}
+
+/*
+  - wählt das n-te Element aus
+*/
+
+.container :nth-child(5) {
+  color: red;
+}
+
+.container :nth-child(even) {
+  background-color: grey;
+}
+
+.container :nth-child(odd) {
+  background-color: blue;
+}
+
+.container :nth-child(3n+1) {
+  text-decoration: line-through;
+}
+
+/*
+  - wählt das n-te Element von hinten aus
+*/
+
+.container :nth-last-child(5) {
+  color: red;
+}
+
+.container :nth-last-child(even) {
+  width: 200px;
+}
+
+.container :nth-last-child(odd) {
+  width: 400px;
+}
+
+.container :nth-last-child(3n+1) {
+  width: 600px;
+}
+
+
+/*
+  - spricht ein Element an, welches das einzige Kind seines Elternelements ist
+*/
+
+:only-child {
+  border: 5px solid red;
+}
+
+/* ========================================================================= */
+
+.container div:first-of-type {
+  color: yellow;
+}
+
+.container div:last-of-type {
+  color: red;
+}
+
+.container div:nth-of-type(3) {
+  height: 50px;
+}
+
+.container div:nth-of-type(even) {
+  height: 75px;
+}
+
+.container div:nth-of-type(odd) {
+  height: 100px;
+}
+
+.container div:nth-of-type(3n+1) {
+  height: 125px;
+}
+
+.container div:nth-last-of-type(3) {
+  text-align: right;
+}
+
+.container div:nth-last-of-type(3n+1) {
+  text-align: center;
+}
+
+.container div:nth-last-of-type(even) {
+  border: 2px solid black;
+}
+
+.container div:nth-last-of-type(odd) {
+  border: 4px solid green;
+}
+
+body div:only-of-type {
+  background-color: pink;
+}
