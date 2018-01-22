@@ -1,0 +1,65 @@
+/* === VIDEO 3: border, border-collapse und border-spacing === */
+
+table {
+  margin-bottom: 2rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#test02, #test02 th, #test02 td {
+  border: 1px solid black;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+/* === VIDEO 5: Tabellen zu stylen I === */
+
+/*
+- caption-side
+
+- background-color
+
+- empty-cells
+  - Mit der Eigenschaft empty-cells können Sie festlegen, ob um leere Zellen Rahmen gezeichnet werden sollen.
+  Die Angabe macht nur Sinn, wenn die Rahmen benachbarter Zellen nicht zusammenfallen
+  (border-collapse: separate;). Erlaubt sind die selbsterklärenden Angaben show und hide.
+
+*/
+
+/* === VIDEO 6: Tabellen zu stylen II === */
+
+/* 
+
+- width
+
+- table-layout
+  - auto: (Standardwert) Angabe einer Breite für eine Tabellenspalte wird als Mindestbreite interpretiert.
+  Fehlen Breitenangaben, so wird der zur Verfügung stehende Platz in Abhängigkeit vom Inhalt auf die einzelnen
+  Tabellenspalten aufgeteilt.
+  - fixed: Bei fehlenden Breitenangaben erhalten die Tabellenspalten die gleiche unveränderliche (fixe) Breite.
+  Falls es notwendig und möglich ist, wird der Inhalt umgebrochen; ist dies nicht möglich, so wird in Abhängigkeit
+  vom Wert der overflow-Eigenschaft der Inhalt abgeschnitten (overflow: hidden;), oder er geht einfach über die
+  Zellbegrenzung hinaus.
+
+*/
+
+#test03 {
+  caption-side: bottom;
+  width: 100%;
+  table-layout: fixed;
+  empty-cells: show;
+}
+
+#test03, #test03 th, #test03 td {
+  border: 1px solid black;
+  border-collapse: separate;
+}
+
+}
+
+#test03 td, #test03 th {
+  width: 130px;
+}

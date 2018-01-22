@@ -1,4 +1,7 @@
 /*
+
+Strukturelle Pseudoklassen sind dafür gedacht, Elemente aufgrund ihrer Position im DOM zu selektieren.
+
   - spricht das Wurzelelement des Dokuments an (immer HTML-Element)
   - ist deshalb das gleich wie html { font-size: 20px }
   - :root ist spezifischer!
@@ -108,6 +111,8 @@ p:empty {
 .container div:nth-of-type(3n+1) {
   height: 125px;
 }
+
+/* ----------------------------------------- */
 
 .container div:nth-last-of-type(3) {
   text-align: right;

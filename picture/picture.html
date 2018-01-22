@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Das Picture-Element</title>
+    <link type="text/css" rel="stylesheet" href="picture.css">
+	</head>
+
+	<body>
+
+    <!--
+
+    === VIDEO 1 ===
+
+    - <picture>-Element gibt uns die Möglichkeit ohne CSS/JS Bilder zu laden,
+    die für eine bestimmte Bildschirmgröße optimal sind
+    - ist eine Art <img> Element, dass es möglich macht eine bestimmte Version eines
+    Bildes zu laden, die für eine bestimmte Bildschirmgröße optimiert ist
+    - man muss für einen Banner dann nicht ein riesiges 1920xIRGENDWAS Bild laden,
+    was dann mit einer width in % runterskaliert, sondern kann sagen von hier bis hier
+    das Bild und ab dann ein anderes.
+    - kann so nur mit HTML dafür sorgen, dass bei bestimmter Viewport größe, darauf
+    optimiertes Bild geladen wird
+
+    - <picture>-Element hat keine eigenen Attribute (nur ein Art Container)
+    - kann ein oder mehrere <source>-Elemente beinhalten
+    - muss ein <img>-Element am Ende beinhalten
+
+		- als letztes MUSS IMMER ein <img> angegeben werden, falls Browser <picture> nicht unterstützt oder
+    keines der Bilder aus den <source>-Elementen gefunden wird
+    - wird <img> nicht angegeben, dann wird keines der Bilder angezeigt
+    - das <img>-Element ist auch der Ort an dem Alternativtext im alt-Attribut angegeben werden kann
+
+    <picture>
+      <source>
+      <source>
+      <img src="logo-rot.png" alt="Das Logo!">
+    </picture>
+
+    -->
+
+    <!--
+
+    === VIDEO 2 ===
+
+    - Attribute für <source>-Elemente:
+      - srcset (Pflicht!): hier kann Pfad zu einen einzelnen Bild angegeben werden ( srcset="logo-yellow.png" )
+      oder eine komma-separierte Liste mit Pfaden zu Versionen dieses Bildes die für
+      bestimmte Pixel-Dichten optimiert sind ( srcset="logo-yellow.png, logo-yellow2X.png 2x" )
+      - media (optional): hier kann jede beliebige Media-Query angegeben werden, die auch in CSS angegeben
+      werden könnte ( media="(min-width: 1200px)" ); gibt an ab welcher größe, dieses Bild verwendet werden soll.
+      - type (optional): MIME-Type (kurz zeigen)
+
+      <picture>
+        <source media="(max-width: 768px)" srcset="logo-gelb.png" sizes="(max-width: 600px) 60%, (max-width: 700px) 40%, 20%" type="image/png">
+        <source media="(max-width: 1200px)" srcset="logo-blau.png" sizes="(max-width: 900px) 60%, (max-width: 1000px) 40%, 20%" type="image/png">
+        <img src="logo-rot.png" alt="Logo in Rot">
+      </picture>
+
+    -->
+
+    <picture>
+      <source media="(max-width: 768px)" srcset="logo-gelb.png" type="image/png">
+      <source media="(max-width: 1200px)" srcset="logo-blau.png" type="image/png">
+      <img src="logo-rot.png" alt="Das Logo!">
+    </picture>
+
+	</body>
+
+</html>

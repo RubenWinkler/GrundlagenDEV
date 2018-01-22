@@ -1,0 +1,46 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  margin-bottom: 2rem;
+}
+
+/*
+  - border-radius definiert den Radius der Ecken eines Elements
+*/
+
+#test01 {
+  border-radius: 15px;
+}
+
+/*
+  - man kann auch in % angeben
+*/
+
+#test02 {
+  border-radius: 20%;
+}
+
+/*
+  - bei 2: obere linke und untere rechte Ecke, obere rechte und untere linke Ecke
+*/
+
+#test03 {
+  border-radius: 20px 40px;
+}
+
+/*
+  - bei 3: obere linke Ecke, obere rechte und untere linke Ecke, untere rechte Ecke
+*/
+
+#test04 {
+  border-radius: 20px 40px 60px;
+}
+
+/*
+  - bei 4: obere linke Ecke, obere rechte Ecke, unter rechte Ecke, untere rechte Ecke
+*/
+
+#test05 {
+  border-radius: 20px 40px 60px 80px;
+}

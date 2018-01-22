@@ -1,0 +1,10 @@
+div {
+  height: 300px;
+  width: 300px;
+  background-color: grey;
+}
+
+#einKreis {
+  border-radius: 50%;
+  /* border-radius: 150px; */
+}

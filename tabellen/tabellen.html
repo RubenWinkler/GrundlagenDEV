@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="tabellen.css">
+	</head>
+
+	<body>
+
+    <!-- === VIDEO 1: Das Grundgerüst von Tabellen === -->
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Nachname</th>
+        <th>Punkte</th>
+      </tr>
+      <tr>
+        <td>Pan</td>
+        <td>Peter</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>Mustermann</td>
+        <td>Max</td>
+        <td>33</td>
+      </tr>
+      <tr>
+        <td>Punkte</td>
+        <td>(gesamt)</td>
+        <td>55</td>
+      </tr>
+    </table>
+
+    <!-- === VIDEO 2: Gliederung von Tabellen === -->
+
+    <!--
+
+    - man sollte Tabellen nach Möglichkeit in Unterabschnitte gleidern:
+      - maximal ein <thead> (Kopfzellen/Überschriften)
+      - mindestens ein <tbody> (Datenzellen)
+      - maximal ein <tfoot> (Zusammenfassung/Erläuterungen)
+      (- wenn Tabelle grüößer als eine DIN-A4-Seite ist werden beim drucken
+      <thead> und <tfoot> auf jeder Seite wiederholt)
+      - Reihenfolge MUSS <thead><tbody><tfoot> sein!
+
+    -->
+
+    <table>
+      <caption>Tabelle mit Punkten</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Nachname</th>
+          <th>Punkte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pan</td>
+          <td>Peter</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>Mustermann</td>
+          <td>Max</td>
+          <td>33</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Punkte</td>
+          <td>(gesamt)</td>
+          <td>55</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- === VIDEO 3: border, border-collapse und border-spacing -->
+
+    <table id="test01">
+      <caption>Tabelle mit Punkten</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Nachname</th>
+          <th>Punkte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pan</td>
+          <td>Peter</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>Mustermann</td>
+          <td>Max</td>
+          <td>33</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Punkte</td>
+          <td>(gesamt)</td>
+          <td>55</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <table id="test02">
+      <caption>Tabelle mit Punkten</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Nachname</th>
+          <th>Punkte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pan</td>
+          <td>Peter</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>Mustermann</td>
+          <td>Max</td>
+          <td>33</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Punkte</td>
+          <td>(gesamt)</td>
+          <td>55</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- === VIDEO 4: Zellen verbinden und Spalten verbinden -->
+
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="2">Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td colspan="2" rowspan="2">Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- === VIDEO 5: Möglichkeiten Tabellen zu stylen -->
+
+    <table id="test03">
+      <caption>Eine Caption für diese Tabelle</caption>
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>Test</th>
+          <th>Test</th>
+          <th>Test</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tfoot>
+      </table>
+
+	</body>
+
+</html>
