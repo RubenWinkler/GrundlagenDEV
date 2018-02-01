@@ -18,20 +18,15 @@ table, th, td {
 /* === VIDEO 5: Tabellen zu stylen I === */
 
 /*
-- caption-side
 
 - background-color
+
+- caption-side
 
 - empty-cells
   - Mit der Eigenschaft empty-cells können Sie festlegen, ob um leere Zellen Rahmen gezeichnet werden sollen.
   Die Angabe macht nur Sinn, wenn die Rahmen benachbarter Zellen nicht zusammenfallen
   (border-collapse: separate;). Erlaubt sind die selbsterklärenden Angaben show und hide.
-
-*/
-
-/* === VIDEO 6: Tabellen zu stylen II === */
-
-/* 
 
 - width
 
@@ -56,8 +51,6 @@ table, th, td {
 #test03, #test03 th, #test03 td {
   border: 1px solid black;
   border-collapse: separate;
-}
-
 }
 
 #test03 td, #test03 th {

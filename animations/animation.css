@@ -1,0 +1,83 @@
+/*
+
+Quelle: https://www.w3schools.com/css/css3_animations.asp
+
+=== VIDEO 1: Die Grundlagen ===
+
+- mit Animationen kann man sich Elemente flüssig
+von einem zum anderen Zustand verändern lassen (z.B. rot -> grün)
+
+- mit Animations kann man so viele CSS-Eigenschaften animieren wie man will
+und so oft wie man will
+
+- um Animations zu nutzen muss man sogenannte Keyframs spezifizieren
+
+- Keyframes sind sozusagen die Schlüsselzustände der Animation
+(z.B. rot -> grün -> blau)
+
+- Keyframes legen als fest welche CSS-Eigenschaften das animierte Element wann hat
+
+- mit Keyframes spezifiziert man sozusagen die eigentliche Animation,
+die Animation kann man dann in einem Element verwenden
+
+- animation referenziert den Namen der Animation
+- animation-duration legt den Zeitrau der Animation fest
+(wird dies nicht spezifiziert, gibt es keine Animation, da Default 0s ist)
+
+*/
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin-bottom: 2rem;
+}
+
+@keyframes farbwechsel {
+  from {background-color: red;} /* from entspricht 0% */
+  to {background-color: blue;}  /* to entspricht 100% */
+}
+
+#test01 {
+  animation: farbwechsel;
+  animation-duration: 4s;
+}
+
+@keyframes regenbogen {
+  0% {background-color: red;}
+  17% {background-color: orange;}
+  34% {background-color: yellow;}
+  51% {background-color: green;}
+  68% {background-color: lightblue;}
+  85% {background-color: indigo;}
+  100% {background-color: violet;}
+}
+
+/* === VIDEO 2: Komplexere Animationen === */
+
+#test02 {
+  animation: regenbogen;
+  animation-duration: 10s;
+}
+
+@keyframes komplexereAnimation {
+  0% {background-color: red; top: 0; left: 0; width: 200px; height: 200px;}
+  25% {background-color: orange; top: 0; left: 400px; width: 100px; height: 100px;}
+  50% {background-color: yellow; top: 400px; left: 400px; width: 200px; height: 200px;}
+  75% {background-color: green; top: 400px; left: 0; width: 300px; height: 300px;}
+  100% {background-color: lightblue; top: 0; left: 0; width: 200px; height: 200px;}
+}
+
+#test03 {
+  position: relative;
+  animation: komplexereAnimation;
+  animation-duration: 10s;
+}
+
+/* === VIDEO 3: Animationen verzögern, wiederholen und umkehren === */
+
+/* === VIDEO 4: Geschwindigkeitskurven === */
+
+/* === VIDEO 5: Füllmodus === */
+
+/* === VIDEO 6: Die Kurzschreibweise === */
