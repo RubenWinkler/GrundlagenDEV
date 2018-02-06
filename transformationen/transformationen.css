@@ -1,0 +1,15 @@
+#testDiv {
+  background-color: grey;
+  width: 400px;
+  padding: 2rem;
+  margin: 10rem;
+  transform: skewX(-15deg); /* noch rotateZ(45deg) zeigen, dann andere Eigenschaften */
+}
+
+/* https://www.w3schools.com/cssref/css3_pr_transform.asp */
+
+
+/* Möglichkeit dagegen zu arbeiten */
+#testP {
+  transform: skewX(15deg);
+}

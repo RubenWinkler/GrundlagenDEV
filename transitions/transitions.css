@@ -1,0 +1,114 @@
+/* VIDEO 1: Grundlagen von Transitions
+
+=== Grundlagen ===
+
+- mit Transitions kann man dafür sorgen, dass sich die Werte einer CSS-Eigenschaft
+flüssig von einem Wert zu einem anderen verändern (Transitions sind an Trigger gebunden)
+- einfachste Möglichkeit:
+  - transition-property: CSS-Eigenschaft die Transition nutzen soll
+  - transition-duration: Dauer der Transition
+  - Trigger mit Wert festlegen zu dem transitioned werden soll
+
+*/
+
+/*
+
+#test {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  transition-property: width; WICHTIG: Default is all!!!
+  transition-duration: 1s;
+}
+
+#test:hover {
+  width: 300px;
+}
+
+*/
+
+
+/* === Mehrere CSS-Eigenschaften ansprechen ===
+
+#test {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  transition-property: width, height;
+  transition-duration: 1s;
+}
+
+#test:hover {
+  width: 300px;
+  height: 300px;
+}
+
+*/
+
+/* VIDEO 2: Transitions verzögern und Geschwindigkeitskurven */
+
+/*
+
+#test {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  transition-property: width, height;
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+
+#test:hover {
+  width: 300px;
+  height: 300px;
+}
+
+*/
+
+/*
+
+#test {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  transition-property: width, height;
+  transition-duration: 1s;
+  transition-delay: 1s;
+  transition-timing-function: linear;
+}
+
+#test:hover {
+  width: 300px;
+  height: 300px;
+}
+
+*/
+
+/*
+
+ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+linear - specifies a transition effect with the same speed from start to end
+ease-in - specifies a transition effect with a slow start
+ease-out - specifies a transition effect with a slow end
+ease-in-out - specifies a transition effect with a slow start and end
+cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+
+*/
+
+/* VIDEO 3: Transition-Kurzschreibweise
+
+transition: CSS-Eigenschaft Dauer Geschwindigkeitskurve Verzögerung;
+
+*/
+
+#test {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  transition: width 1s ease-in-out 1s, height 1s ease-in-out 1s;
+}
+
+#test:hover {
+  width: 300px;
+  height: 300px;
+}

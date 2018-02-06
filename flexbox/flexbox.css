@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+}
+
+/* === VIDEO 1: Grundlagen von Flexboxen === */
+
+/*
+
+- Für ein Flexbox-Layout braucht es nur 2 Elemente:
+  - äußeren Container der auf "display: flex;" gesetzt wird
+  - direkte Kindelemente, die automatisch zu flexiblen Elementen ("Flex-Items") im Container werden
+
+*/
+
+.flex-container {
+  display: flex;
+  background-color: blue;
+}
+
+.flex-container > p {
+  background-color: lightgrey;
+  margin: 1rem;
+}
+
+/* === VIDEO 2: Eigenschaften des Flex-Containers I === */
+
+/*
+
+- flex-direction
+  - definiert in welche Richtung der Container seine Kindelemente ("Flex-Items") anordnen will
+    - row: (default) Flex-Items werden in einer horizontalen Reihe angeordnet
+    - row-reverse: Flex-Items werden in einer horizontalen Reihe angeordnet, nur in umgekehrter Reihenfolge
+    - column: Flex-Items werden in einer vertikalen Reihe angeordnet
+    - column-reverse: Flex-Items werden in einer vertikalen Reihe angeordnet, nur in umgekehrter Reihenfolge
+    - initial: zu default
+    - inherit: geerbt
+- flex-wrap
+  - definiert ob und wie die Kindelemente ("Flex-Items") im Flex-Container umbrechen sollen
+    - no-wrap: (default) Flex-Items brechen nicht um - immer eine Zeile
+    - wrap: Flex-Items brechen um, wenn nötig
+    - wrap-reverse: Flex-Items brechen um, wenn nötig, aber sind in umgegehrter Reihenfolge angeordnet
+    - initial: zu default
+    - inherit: geerbt
+- flex-flow:
+  - Kurzschreibweise für flex-direction und flex-wrap in eins (Anordnungsrichtung + Umbruch)
+*/
+
+/* === VIDEO 3: Eigenschaften des Flex-Containers II === */
+
+/*
+
+- justify-content
+  - legt fest, wie die Flex-Items entlang der Horizontalen angeordnet werden
+    - flex-start: (default) Flex-Items werden linksbündig angeordnet
+    - flex-end: Flex-Items werden rechtsbündig angeordnet
+    - center: Flex-Items werden in der horizontalen Mitte des Flex-Containers platziert,
+      möglicherweise Rand rechts oder links
+    - space-between: Flex-Items werden horizontal gleichmäßig verteilt mit gleichem Abstand zwischen ihnen,
+      das erste und letzte Flex-Item stoßen an die Ränder des Flex-Containers
+    - space-around: Flex-Items werden horizontal gleichmäßig verteilt mit gleichem Abstand zwischen ihnen (auch zum Rand)
+    - initial: zu default
+    - inherit: geerbt
+
+- align-items
+ - legt fest, wie die Flex-Items entlang der Vertikalen angeordnet werden
+  - stretch: (default) alle Flex-Items werden in der Vertikalen gestrecht, sodass sie Flex-Container ausfüllen
+  - center: Flex-Items werden in der vertikalen Mitte des Flex-Containers zentriert
+  - flex-start: Flex-Items werden oben im Flex-Container platziert
+  - flex-end: Flex-Items werden unten im Flex-Container platziert
+  - baseline: Flex-Items werden an der Grundlinie des Flex-Containers ausgerichtet
+  - initial: zu default
+  - inherit: geerbt
+
+- align-content
+  - modifiziert das Verhalten der flex-wrap Eigenschaft
+  - ist im Prinzip genau wie align-items, aber nicht für Flex-Items sondern für Flex-Lines
+  - legt fest, wie die Flex-Lines entlang der Vertikalen angeordnet werden
+    - stretch: (default) Flex-Lines werden in der Vertikalen gestrecht, sodass sie den
+      Flex-Container ausfüllen
+    - center: Flex-Lines werden in der vertikalen Mitte des Flex-Containers zentriert
+    - flex-start: Flex-Lines werden oben im Flex-Container platziert
+    - flex-end: Flex-Lines werden unten im Flex-Container platziert
+    - space-between: Flex-Lines werden vertikal gleichmäßig verteilt mit gleichem Abstand zwischen ihnen,
+      erste und letzte Flex-Line stoßen an unteren oder oberen Rand
+    - space-around: Flex-Lines werden vertikal gleichmäßig verteilt mit gleichem Abstand zwischen ihnen (auch zum Rand)
+    - initial: zu default
+    - inherit: geerbt
+
+*/
+
+/* === VIDEO 4: Eigenschaften der Flex-Items I === */
+
+/*
+
+- flex-grow
+  - legt fest wie viel ein Flex-Item im Verhältnis zu den anderen Flex-Items im selben
+    Flex-Container wächst, wenn Flex-Container größer wird
+    - flex-grow: zahl (default ist 0)
+
+- flex-shrink
+- legt fest wie viel ein Flex-Item im Verhältnis zu den anderen Flex-Items im selben
+  Flex-Container schrumpft, wenn Flex-Container kleiner wird
+  - flex-grow: zahl (default ist 1)
+
+- flex-basis
+  - definiert die initiale breite eines Flex-Items
+    - number: Eine feste Größenangabe oder Prozentangabe
+    - auto: (default) Größe ist gleich der Größe des Flex-Items, ist keine Größe spezifiziert,
+      wird die Größe dem Inhalt angepasst
+    - initial: zu default
+    - inherit: geerbt
+
+- flex
+  - Kurzschreibweise für flex-grow, flex-shrink und flex-basis
+  - auto: 1 1 auto
+  - initial: 0 1 auto
+  - none: 0 0 auto
+  - inherit: geerbt
+
+*/
+
+/* === VIDEO 5: Eigenschaften der Flex-Items II === */
+
+/*
+
+- order
+  - legt die Reihenfolge von Flex-Items fest (relativ zu anderen Flex-Items im selben Container)
+    - order: zahl (default ist 0)
+
+- align-self
+  - legt die Ausrichtung eines Flex-Items in einem Flex-Container fest
+    - auto: (default) das Flex-Item erbt die align-items Eigenschaft von seinem
+      Eltern Flex-Container oder stretch, wenn es keinen Eltern Flex-Container hat
+    - stretch: Flex-Item wird in der Vertikalen gestrecht, sodass es Flex-Container ausfüllt
+    - center: Flex-Item wird in der vertikalen Mitte des Flex-Containers zentriert
+    - flex-start: Flex-Item wird oben im Flex-Container platziert
+    - flex-end: Flex-Item wird unten im Flex-Container platziert
+    - baseline: Flex-Item wird an der Grundlinie des Flex-Containers ausgerichtet
+    - initial: zu default
+    - inherit: geerbt
+
+*/
+
+/* === VIDEO 6: Praxis-Aufgabe === */
+
+/*
+
+- https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_image_gallery
+
+*/
