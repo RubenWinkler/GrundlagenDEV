@@ -8,8 +8,5 @@
 
 /* https://www.w3schools.com/cssref/css3_pr_transform.asp */
 
-
-/* Möglichkeit dagegen zu arbeiten */
-#testP {
-  transform: skewX(15deg);
-}
+/* The transform property applies a 2D or 3D transformation to an element.
+This property allows you to rotate, scale, move, skew, etc., elements. */
